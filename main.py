@@ -1,6 +1,7 @@
 import telebot
 import wikipedia
 import re
+import os
 
 # Создаем экземпляр бота
 bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
@@ -100,4 +101,5 @@ def handle_text(message):
 
 # Запуск бота
 bot.polling(none_stop=True)
+
 

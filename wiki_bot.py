@@ -3,7 +3,7 @@ import wikipedia
 import re
 
 # Создаем экземпляр бота
-bot = telebot.TeleBot('8252085836:AAH5QIUQNeyinW7k0Jm8Aj_BzwIEt-IK4es')
+bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
 
 # Устанавливаем украинский язык Википедии
 wikipedia.set_lang("uk")
@@ -100,3 +100,4 @@ def handle_text(message):
 
 # Запуск бота
 bot.polling(none_stop=True)
+
